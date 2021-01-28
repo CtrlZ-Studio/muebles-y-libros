@@ -4,16 +4,16 @@ import { WEB_NAME } from 'utils/constants';
 
 import PageWrapper from 'components/shared/PageWrapper';
 
-export default function PageHome() {
+export default function PageContact() {
   return (
     <>
       <Head>
-        <title>{WEB_NAME} | Home</title>
-        <meta name="description" content="Home page description." />
+        <title>{WEB_NAME} | Contact</title>{' '}
+        <meta name="description" content="Contact page description." />
       </Head>
 
       <PageWrapper>
-        <h1 className="font-heading">HOME PAGE</h1>
+        <h1>CONTACT PAGE</h1>
       </PageWrapper>
     </>
   );
