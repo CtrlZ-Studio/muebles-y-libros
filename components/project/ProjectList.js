@@ -18,14 +18,14 @@ const ProjectList = ({ projectsData }) => {
         dragConstraints={{ left: leftConstraintLaptop, right: 0 }}
         dragElastic={0.05}
       >
-        {projectsData.map((project) => (
-          <ProjectCard project={project} />
+        {projectsData.map((project, index) => (
+          <ProjectCard project={project} key={index} />
         ))}
       </motion.div>
 
       <div className="flex flex-col items-center w-full lg:hidden space-y-12 py-12">
-        {projectsData.map((project) => (
-          <ProjectCard project={project} />
+        {projectsData.map((project, index) => (
+          <ProjectCard project={project} key={index} />
         ))}
       </div>
     </>

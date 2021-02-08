@@ -47,18 +47,6 @@ export const headerVariants = {
   }
 };
 
-export const drawerMenuVariants = {
-  initial: { y: '-100%' },
-  animate: (custom) => ({
-    y: custom ? 0 : '-100%',
-    transition: mainTransition
-  }),
-  exit: {
-    y: '-100%',
-    transition: mainTransition
-  }
-};
-
 export const sliderVariants = {
   enter: (direction) => {
     return {

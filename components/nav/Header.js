@@ -24,18 +24,6 @@ const Header = () => {
       ) : (
         <span></span>
       )}
-      {/* <div className="hidden lg:block">
-        <ul className="flex lg:space-x-14 2x:space-x-16">
-          {MENU_LINKS &&
-            MENU_LINKS.map((menuLink, index) => (
-              <li key={index}>
-                <ActiveLink href={`${menuLink.slug}`}>
-                  <a>{menuLink.label}</a>
-                </ActiveLink>
-              </li>
-            ))}
-        </ul>
-      </div> */}
     </motion.header>
   );
 };
