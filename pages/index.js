@@ -6,7 +6,7 @@ import { pageVariants } from 'utils/framer';
 import { getHome, getAbout, getContact, getAllProjects } from 'lib/graphcms';
 
 import Layout from 'components/nav/Layout';
-import HomeHero from 'components/home/HomeHero';
+import HomeSection from 'components/home/HomeSection';
 import AboutSection from 'components/about/AboutSection';
 import WorkSection from 'components/work/WorkSection';
 
@@ -32,7 +32,7 @@ export default function Index({
           exit={{ opacity: 0 }}
           variants={pageVariants}
         >
-          <HomeHero homeData={homeData} />
+          <HomeSection homeData={homeData} />
 
           <AboutSection
             aboutData={aboutData}

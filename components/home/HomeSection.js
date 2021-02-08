@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-const HomeHero = ({ homeData }) => {
+const HomeSection = ({ homeData }) => {
   let [first, ...second] = homeData.heading.split(' ');
   second = second.join(' ');
 
   return (
     <section className="relative min-h-screen lg:h-screen flex flex-col justify-center items-center lg:grid lg:grid-cols-3">
       <div className="lg:col-start-2 lg:col-span-1 space-y-1 lg:space-y-3">
-        <h1 className="self-center lg:text-center font-heading text-6xl lg:text-8xl text-accent-dark">
+        <h1 className="self-center lg:text-center font-heading text-6xl lg:text-8xl 2xl:text-9xl text-accent-dark">
           {first}
         </h1>
 
@@ -20,7 +20,7 @@ const HomeHero = ({ homeData }) => {
           />
         </div>
 
-        <h1 className="self-center lg:text-center font-heading text-6xl lg:text-8xl text-accent-dark">
+        <h1 className="self-center lg:text-center font-heading text-6xl lg:text-8xl 2xl:text-9xl text-accent-dark">
           {second}
         </h1>
       </div>
@@ -28,4 +28,4 @@ const HomeHero = ({ homeData }) => {
   );
 };
 
-export default HomeHero;
+export default HomeSection;

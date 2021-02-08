@@ -12,6 +12,10 @@ body {
   @apply overflow-x-hidden bg-gray-100 font-body;
 }
 
+p {
+  @apply leading-relaxed;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -42,8 +46,12 @@ body {
 /* Start purging... */
 @tailwind components;
 
+.tw-header {
+  @apply flex items-center h-12 lg:h-20 2xl:h-24 px-6 lg:px-10 2xl:px-12 uppercase lg:text-2xl 2xl:text-3xl border-2;
+}
+
 .tw-container {
-  @apply px-12 lg:px-12 2xl:px-16;
+  @apply px-12 lg:px-12 2xl:px-24;
 }
 
 .tw-h-header {
