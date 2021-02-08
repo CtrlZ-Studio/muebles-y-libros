@@ -17,9 +17,9 @@ const Layout = ({ children }) => {
         toggleMenu={toggleMenu}
         setToggleMenu={setToggleMenu}
       />
-      <DrawerMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
+      {/* <DrawerMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> */}
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

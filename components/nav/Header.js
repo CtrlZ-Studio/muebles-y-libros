@@ -1,32 +1,30 @@
+import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 
 import { headerVariants } from 'utils/framer';
-import { MENU_LINKS } from 'utils/constants';
 
-import NavLogo from 'components/nav/NavLogo';
-import ActiveLink from 'components/nav/ActiveLink';
-import IconMenu from 'components/icons/IconMenu';
+import IconBack from 'components/icons/IconBack';
 
-const Header = ({ toggleMenu, setToggleMenu }) => {
+const Header = () => {
+  const router = useRouter();
+
+  const route = router.route;
+
   return (
     <motion.header
-      className="absolute top-0 right-0 left-0 z-999 flex justify-between items-center w-full bg-gray-300 tw-container tw-h-header"
+      className="absolute top-0 right-0 left-0 z-999 flex justify-between items-center w-full tw-container tw-h-header"
       initial="initial"
       animate="animate"
       variants={headerVariants}
     >
-      <div>
-        <NavLogo />
-      </div>
-
-      <div
-        className="block lg:hidden"
-        onClick={() => setToggleMenu(!toggleMenu)}
-      >
-        <IconMenu />
-      </div>
-
-      <div className="hidden lg:block">
+      {route !== '/' ? (
+        <a href="/">
+          <IconBack />
+        </a>
+      ) : (
+        <span></span>
+      )}
+      {/* <div className="hidden lg:block">
         <ul className="flex lg:space-x-14 2x:space-x-16">
           {MENU_LINKS &&
             MENU_LINKS.map((menuLink, index) => (
@@ -37,7 +35,7 @@ const Header = ({ toggleMenu, setToggleMenu }) => {
               </li>
             ))}
         </ul>
-      </div>
+      </div> */}
     </motion.header>
   );
 };

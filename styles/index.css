@@ -1,14 +1,39 @@
 @tailwind base;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-gray-100 font-body tw-container;
+  /* cursor: none; */
+  scrollbar-width: none;
+  -webkit-font-smoothing: antialiased;
+
+  @apply overflow-x-hidden bg-gray-100 font-body;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* ----- Write your own custom base styles here ----- */
-
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('public/fonts/bahnschrift/bahnschrift.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'Otto';
-  src: url('public/fonts/ottoattactype.ttf') format('truetype');
+  src: url('public/fonts/otto/ottoattactype.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Quentin';
+  src: url('public/fonts/quentin/quentin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -18,11 +43,23 @@ body {
 @tailwind components;
 
 .tw-container {
-  @apply px-6 lg:px-12 2xl:px-16;
+  @apply px-12 lg:px-12 2xl:px-16;
 }
 
 .tw-h-header {
   @apply h-12 lg:h-20 2xl:h-24;
+}
+
+.tw-fullpage {
+  height: calc(100vh - theme('spacing.12'));
+}
+
+.tw-fullpage-laptop {
+  height: calc(100vh - theme('spacing.20'));
+}
+
+.tw-fullpage-desktop {
+  height: calc(100vh - theme('spacing.24'));
 }
 
 .tw-py {
@@ -34,7 +71,15 @@ body {
 }
 
 .tw-selected {
-  @apply font-bold text-red-700;
+  @apply font-bold text-accent-medium;
+}
+
+.tw-slider-control {
+  @apply absolute flex justify-center items-center w-12 h-12 select-none cursor-pointer border border-accent-dark rounded-full text-4xl z-50;
+}
+
+.tw-animation {
+  @apply transition duration-300 ease-in-out;
 }
 
 /* Stop purging. */

@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 import Layout from 'components/nav/Layout';
 
@@ -19,15 +19,15 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
-        <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+        <Layout>
           <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </Layout>
+        </Layout>
+      </AnimatePresence>
     </>
   );
 }

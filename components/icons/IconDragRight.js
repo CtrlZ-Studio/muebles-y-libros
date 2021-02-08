@@ -1,4 +1,4 @@
-const IconBack = () => {
+const IconDragRight = () => {
   return (
     <svg
       className="w-6 h-6"
@@ -8,14 +8,13 @@ const IconBack = () => {
       stroke="currentColor"
     >
       <path
-        stroke={2}
         strokeLinecap="square"
         strokeLinejoin="square"
         strokeWidth={2}
-        d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
+        d="M14 5l7 7m0 0l-7 7m7-7H3"
       />
     </svg>
   );
 };
 
-export default IconBack;
+export default IconDragRight;

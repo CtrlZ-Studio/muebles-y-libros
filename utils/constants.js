@@ -1,4 +1,4 @@
-export const WEB_NAME = 'Website Name';
+export const WEB_NAME = 'Muebles y Libros';
 
 export const MENU_LINKS = [
   {
