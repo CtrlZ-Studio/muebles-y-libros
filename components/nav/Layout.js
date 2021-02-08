@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { WEB_NAME } from 'utils/constants';
 
 import Header from 'components/nav/Header';
+import Alert from 'components/nav/Alert';
 
-const Layout = ({ children }) => {
+const Layout = ({ preview, children }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
         toggleMenu={toggleMenu}
         setToggleMenu={setToggleMenu}
       />
+      <Alert preview={preview} />
       <main>{children}</main>
     </>
   );

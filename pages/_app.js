@@ -2,8 +2,6 @@ import Head from 'next/head';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
-import Layout from 'components/nav/Layout';
-
 import 'styles/index.css';
 
 function handleExitComplete() {
@@ -24,9 +22,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-        <Layout>
-          <Component {...pageProps} key={router.route} />
-        </Layout>
+        <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     </>
   );
