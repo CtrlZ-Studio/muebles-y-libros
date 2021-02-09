@@ -5,19 +5,11 @@ html {
 }
 
 body {
-  /* cursor: none; */
-  scrollbar-width: none;
-  -webkit-font-smoothing: antialiased;
-
-  @apply overflow-x-hidden bg-gray-100 font-body;
+  @apply overflow-hidden bg-gray-100 font-body;
 }
 
 p {
   @apply leading-relaxed;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 /* ----- Write your own custom base styles here ----- */
@@ -96,6 +88,17 @@ p {
 
 /* Start purging... */
 @tailwind utilities;
+
+@layer utilities {
+  @variants responsive {
+    .scroll-snap-y {
+      scroll-snap-type: y mandatory;
+    }
+    .scroll-snap-start {
+      scroll-snap-align: start;
+    }
+  }
+}
 
 /* Stop purging. */
 

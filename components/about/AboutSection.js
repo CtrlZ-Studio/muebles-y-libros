@@ -3,9 +3,9 @@ import { WEB_NAME } from 'utils/constants';
 
 import Logo from 'components/icons/Logo';
 
-const AboutSection = ({ aboutData, contactData }) => {
+const AboutSection = ({ aboutData }) => {
   return (
-    <article className="relative min-h-screen lg:h-screen bg-accent-dark text-white">
+    <article className="relative min-h-screen lg:h-screen bg-accent-dark text-white lg:scroll-snap-start">
       <header className="tw-header border-accent-dark bg-gray-100 text-accent-dark">
         {WEB_NAME} // {aboutData.heading}
       </header>
@@ -31,7 +31,7 @@ const AboutSection = ({ aboutData, contactData }) => {
         </div>
         <div className="w-full lg:w-1/3 flex flex-col justify-center space-y-12">
           <Logo />
-          <div className="flex justify-between">
+          <div className="flex justify-between lg:text-lg 2xl:text-xl">
             <a
               href="https://www.instagram.com/mueblesylibros"
               target="_blank"

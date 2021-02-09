@@ -8,7 +8,7 @@ import IconDragLeft from 'components/icons/IconDragRight';
 
 const WorkSection = ({ projectsData }) => {
   return (
-    <section className="relative min-h-screen lg:h-screen text-white border-t-2 border-accent-dark">
+    <section className="relative min-h-screen lg:h-screen text-white overflow-x-hidden lg:scroll-snap-start">
       <header className="absolute top-0 left-0 right-0 tw-header border-bottom border-black bg-black text-white">
         {WEB_NAME} // Hacemos
       </header>

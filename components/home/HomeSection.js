@@ -5,7 +5,7 @@ const HomeSection = ({ homeData }) => {
   second = second.join(' ');
 
   return (
-    <section className="relative min-h-screen lg:h-screen flex flex-col justify-center items-center lg:grid lg:grid-cols-3">
+    <section className="relative min-h-screen lg:h-screen flex flex-col justify-center items-center lg:grid lg:grid-cols-3 lg:scroll-snap-start">
       <div className="lg:col-start-2 lg:col-span-1 space-y-1 lg:space-y-3">
         <h1 className="self-center lg:text-center font-heading text-6xl lg:text-8xl 2xl:text-9xl text-accent-dark">
           {first}

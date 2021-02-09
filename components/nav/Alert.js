@@ -1,6 +1,6 @@
 const Alert = ({ preview }) => {
   return (
-    <div className="py-2 text-center text-sm">
+    <>
       {preview ? (
         <>
           This page is a preview.{' '}
@@ -15,7 +15,7 @@ const Alert = ({ preview }) => {
       ) : (
         <></>
       )}
-    </div>
+    </>
   );
 };
 

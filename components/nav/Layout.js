@@ -11,11 +11,11 @@ const Layout = ({ preview, children }) => {
 
   return (
     <>
-      <Header
+      {/* <Header
         webName={WEB_NAME}
         toggleMenu={toggleMenu}
         setToggleMenu={setToggleMenu}
-      />
+      /> */}
       <Alert preview={preview} />
       <main>{children}</main>
     </>
