@@ -44,6 +44,10 @@ module.exports = {
         'screen-75': '75vh'
       },
 
+      width: {
+        '2xl': '32rem'
+      },
+
       height: {
         'screen-50': '50vh',
         'screen-75': '75vh',

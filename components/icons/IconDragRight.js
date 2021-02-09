@@ -1,7 +1,6 @@
 const IconDragRight = () => {
   return (
     <svg
-      className="w-6 h-6"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
@@ -11,7 +10,7 @@ const IconDragRight = () => {
         strokeLinecap="square"
         strokeLinejoin="square"
         strokeWidth={2}
-        d="M14 5l7 7m0 0l-7 7m7-7H3"
+        d="M17 8l4 4m0 0l-4 4m4-4H3"
       />
     </svg>
   );
