@@ -26,7 +26,7 @@ const WorkSection = ({ projectsData }) => {
           dragConstraints={constraintsRef}
           dragElastic={0.05}
         >
-          <div className="lg:absolute 2xl:top-20 2xl:right-12 flex space-x-3 w-48 text-sm items-center">
+          <div className="lg:absolute lg:top-12 2xl:top-20 lg:right-12 2xl:right-20 flex space-x-3 w-48 text-sm items-center">
             <div className="lg:w-3 2xl:w-4">
               <IconDragLeft />
             </div>
@@ -37,7 +37,7 @@ const WorkSection = ({ projectsData }) => {
             <ProjectCard project={project} key={index} />
           ))}
 
-          <div className="lg:absolute 2xl:bottom-20 2xl:left-12 flex space-x-3 w-48 text-sm items-center">
+          <div className="lg:absolute lg:bottom-12 2xl:bottom-20 lg:left-12 2xl:left-20 flex space-x-3 w-48 text-sm items-center">
             <p>Arrastra para + proyectos</p>
             <div className="lg:w-3 2xl:w-4">
               <IconDragRight />

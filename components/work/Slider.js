@@ -38,7 +38,7 @@ const Slider = ({ gallery }) => {
     <div className="relative w-full h-full flex items-center justify-center">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
-          className="absolute lg:max-h-full-75"
+          className="absolute lg:max-h-full-75 lg:px-20 2xl:px-24"
           key={slide}
           src={images[imageIndex]}
           custom={direction}

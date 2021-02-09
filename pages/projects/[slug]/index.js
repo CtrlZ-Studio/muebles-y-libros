@@ -7,6 +7,7 @@ import { pageVariants } from 'utils/framer';
 
 import Slider from 'components/work/Slider';
 import Layout from 'components/nav/Layout';
+import IconBack from 'components/icons/IconBack';
 
 export default function ProjectPage({ project, preview }) {
   const router = useRouter();
@@ -21,12 +22,18 @@ export default function ProjectPage({ project, preview }) {
         <div>Loading…</div>
       ) : (
         <motion.section
-          className="flex flex-col lg:flex-row lg:space-x-12 space-y-24 lg:space-y-0 py-24 lg:pb-0 lg:pt-0 justify-center items-center min-h-screen lg:h-screen tw-container"
+          className=" relative flex flex-col lg:flex-row lg:space-x-12 space-y-24 lg:space-y-0 py-24 lg:pb-0 lg:pt-0 justify-center items-center min-h-screen lg:h-screen tw-container"
           initial="initial"
           animate="animate"
           exit={{ opacity: 0 }}
           variants={pageVariants}
         >
+          <a
+            className="absolute lg:top-12 lg:left-12 2xl:top-24 2xl:left-24"
+            href="/"
+          >
+            <IconBack />
+          </a>
           <div className="flex flex-col justify-center space-y-6 lg:h-full w-full lg:w-1/2">
             <h1 className="font-heading text-6xl 2xl:text-8xl text-accent-dark">
               {project.title}
