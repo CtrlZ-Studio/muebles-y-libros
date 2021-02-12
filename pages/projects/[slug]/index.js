@@ -33,9 +33,9 @@ export default function ProjectPage({ project }) {
       </div>
 
       <div className="flex flex-col justify-center space-y-6 lg:h-full w-full lg:w-1/2">
-        <h1 className="font-heading text-6xl 2xl:text-8xl text-accent-dark">
+        {/* <h1 className="font-heading text-6xl 2xl:text-8xl text-accent-dark">
           {project.title}
-        </h1>
+        </h1> */}
         <div
           className="text-lg 2xl:text-2xl"
           dangerouslySetInnerHTML={{ __html: project.description.html }}
@@ -50,7 +50,7 @@ export default function ProjectPage({ project }) {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const data = (await getProject(params.slug)) || {};
+  const data = await getProject(params.slug);
 
   return {
     props: {
