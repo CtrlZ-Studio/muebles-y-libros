@@ -22,20 +22,39 @@ p {
 }
 
 /* ----- Write your own custom base styles here ----- */
+
 @font-face {
-  font-family: 'Bahnschrift';
-  src: url('public/fonts/bahnschrift/bahnschrift.woff2') format('woff2');
+  font-family: 'Volte';
+  src: url('public/fonts/volte/Volte.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: 'Otto';
-  src: url('public/fonts/otto/ottoattactype.ttf') format('truetype');
+  font-family: 'Volte';
+  src: url('public/fonts/volte/Volte-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Voyage';
+  src: url('public/fonts/voyage/Voyage-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Voyage';
+  src: url('public/fonts/voyage/Voyage-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Quentin';
   src: url('public/fonts/quentin/quentin.otf') format('opentype');
@@ -51,12 +70,20 @@ p {
   @apply flex items-center h-12 lg:h-20 2xl:h-24 px-6 lg:px-10 2xl:px-12 uppercase lg:text-2xl 2xl:text-3xl border-2;
 }
 
-.tw-container {
-  @apply px-12 lg:px-12 2xl:px-24;
+.tw-px {
+  @apply px-12 lg:px-20 2xl:px-24;
+}
+
+.tw-header-px {
+  @apply px-6 lg:px-10 2xl:px-12;
 }
 
 .tw-h-header {
   @apply h-12 lg:h-20 2xl:h-24;
+}
+
+.tw-pt {
+  @apply pt-12 lg:pt-20 2xl:pt-24;
 }
 
 .tw-fullpage {
@@ -73,10 +100,6 @@ p {
 
 .tw-py {
   @apply h-6 lg:h-10 2xl:h-12;
-}
-
-.tw-mt {
-  @apply mt-12 lg:mt-20 2xl:mt-24;
 }
 
 .tw-selected {
@@ -101,7 +124,7 @@ p {
 @layer utilities {
   @variants responsive {
     .scroll-snap-y {
-      scroll-snap-type: y mandatory;
+      scroll-snap-type: y proximity;
     }
     .scroll-snap-start {
       scroll-snap-align: start;

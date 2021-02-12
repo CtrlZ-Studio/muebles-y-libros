@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 
@@ -12,15 +13,17 @@ const Header = () => {
 
   return (
     <motion.header
-      className="absolute top-0 right-0 left-0 z-999 flex justify-between items-center w-full tw-container tw-h-header"
+      className="absolute top-0 right-0 left-0 z-999 flex justify-between items-center w-full tw-header-px tw-h-header"
       initial="initial"
       animate="animate"
       variants={headerVariants}
     >
       {route !== '/' ? (
-        <a href="/">
-          <IconBack />
-        </a>
+        <Link href="/" scroll={true}>
+          <a>
+            <IconBack />
+          </a>
+        </Link>
       ) : (
         <span></span>
       )}

@@ -6,7 +6,21 @@ import 'styles/index.css';
 
 function handleExitComplete() {
   if (typeof window !== 'undefined') {
-    window.scrollTo({ top: 0 });
+    // Get the hash from the url
+    const hashId = window.location.hash;
+    if (hashId) {
+      // Use the hash to find the first element with that id
+      const element = document.querySelector(hashId);
+
+      if (element) {
+        // Smooth scroll to that elment
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }
+    }
   }
 }
 

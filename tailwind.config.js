@@ -18,8 +18,8 @@ module.exports = {
     },
 
     fontFamily: {
-      body: ['Bahnschrift', 'sans-serif'],
-      heading: ['Otto', 'serif'],
+      body: ['Volte', 'sans-serif'],
+      heading: ['Voyage', 'serif'],
       signature: ['Quentin', 'serif']
     },
 
