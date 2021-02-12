@@ -14,8 +14,7 @@ export default function Index({
   aboutData,
   contactData,
   projectsData,
-  authorsData,
-  preview
+  authorsData
 }) {
   return (
     <>
@@ -46,19 +45,18 @@ export default function Index({
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const homeData = (await getHome(preview)) || [];
-  const aboutData = (await getAbout(preview)) || [];
-  const contactData = (await getContact(preview)) || [];
-  const projectsData = (await getAllProjects(preview)) || [];
+export async function getStaticProps() {
+  const homeData = (await getHome()) || [];
+  const aboutData = (await getAbout()) || [];
+  const contactData = (await getContact()) || [];
+  const projectsData = (await getAllProjects()) || [];
 
   return {
     props: {
       homeData,
       aboutData,
       contactData,
-      projectsData,
-      preview
+      projectsData
     }
   };
 }

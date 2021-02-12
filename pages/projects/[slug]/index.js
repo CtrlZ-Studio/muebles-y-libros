@@ -7,10 +7,9 @@ import { getAllProjectsWithSlug, getProject } from 'lib/graphcms';
 import { pageVariants } from 'utils/framer';
 
 import Slider from 'components/work/Slider';
-import Layout from 'components/nav/Layout';
 import IconBack from 'components/icons/IconBack';
 
-export default function ProjectPage({ project, preview }) {
+export default function ProjectPage({ project }) {
   const router = useRouter();
 
   if (!router.isFallback && !project?.slug) {
@@ -26,7 +25,7 @@ export default function ProjectPage({ project, preview }) {
       variants={pageVariants}
     >
       <div className="absolute top-12 left-12 w-6">
-        <Link href="/#work" scroll={true}>
+        <Link href="/#work" scroll={false}>
           <a>
             <IconBack />
           </a>
@@ -50,12 +49,11 @@ export default function ProjectPage({ project, preview }) {
   );
 }
 
-export const getStaticProps = async ({ params, preview = false }) => {
-  const data = (await getProject(params.slug, preview)) || {};
+export const getStaticProps = async ({ params }) => {
+  const data = (await getProject(params.slug)) || {};
 
   return {
     props: {
-      preview,
       project: data.project
     }
   };
