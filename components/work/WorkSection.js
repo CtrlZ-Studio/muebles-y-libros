@@ -38,9 +38,10 @@ const WorkSection = ({ projectsData }) => {
             <p>Arrastra para + proyectos</p>
           </motion.div>
 
-          {projectsData.map((project, index) => (
-            <ProjectCard project={project} key={index} />
-          ))}
+          {projectsData &&
+            projectsData.map((project, index) => (
+              <ProjectCard project={project} key={index} />
+            ))}
 
           <motion.div
             className="absolute bottom-6 left-6 flex space-x-3 text-sm items-center"
