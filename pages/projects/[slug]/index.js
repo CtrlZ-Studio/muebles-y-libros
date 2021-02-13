@@ -10,7 +10,7 @@ import Layout from 'components/nav/Layout';
 import Slider from 'components/work/Slider';
 import IconBack from 'components/icons/IconBack';
 
-export default function ProjectPage({ project }) {
+export default function ProjectPage({ preview, project }) {
   const router = useRouter();
 
   if (!router.isFallback && !project?.slug) {
