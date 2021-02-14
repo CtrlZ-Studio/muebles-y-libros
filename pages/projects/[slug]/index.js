@@ -32,6 +32,16 @@ export default function ProjectPage({ preview, project }) {
           <span>Loading…</span>
         ) : (
           <>
+            <Head>
+              <title>
+                {WEB_NAME} || {project.seoMetadata.title}
+              </title>
+              <meta
+                name="description"
+                content={project.seoMetadata.description}
+              />
+            </Head>
+
             <div className="absolute top-6 lg:top-10 2xl:top-12 left-6 lg:left-10 2xl:left-12 w-6 lg:w-10 2xl:w-12 text-accent-dark tw-link">
               <Link href="/#work" scroll={false}>
                 <a>
