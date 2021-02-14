@@ -21,12 +21,6 @@ export default function ProjectPage({ preview, project }) {
 
   return (
     <Layout preview={preview}>
-      <Head>
-        <title>
-          {WEB_NAME} || {project.seoMetadata.title}
-        </title>
-        <meta name="description" content={project.seoMetadata.description} />
-      </Head>
       <motion.section
         className="flex flex-col lg:flex-row lg:h-screen lg:items-center lg:justify-evenly space-y-12 lg:space-y-0 tw-px pt-12 lg:pt-0"
         initial="initial"
