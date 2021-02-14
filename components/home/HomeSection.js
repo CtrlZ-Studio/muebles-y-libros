@@ -1,14 +1,13 @@
 import Image from 'next/image';
+import { WEB_NAME } from 'utils/constants';
 
 const HomeSection = ({ homeData }) => {
-  let [first, second, third] = homeData.heading.split(' ');
+  let [first, second, third] = WEB_NAME.split(' ');
 
   return (
-    <section className="h-screen flex flex-col space-y-6 lg:space-y-8 2xl:space-y-12 justify-center items-center tw-px lg:scroll-snap-start">
+    <section className="h-screen flex flex-col space-y-6 lg:space-y-10 2xl:space-y-12 justify-center items-center tw-px lg:scroll-snap-start">
       <div>
-        <h1 className="font-heading text-6xl lg:text-8xl 2xl:text-9xl text-accent-dark">
-          {first}
-        </h1>
+        <h1 className="tw-title">{first}</h1>
       </div>
 
       <div className="w-full lg:w-1/4">
@@ -21,7 +20,7 @@ const HomeSection = ({ homeData }) => {
       </div>
 
       <div>
-        <h1 className="font-heading text-6xl lg:text-8xl 2xl:text-9xl text-accent-dark">
+        <h1 className="tw-title">
           <span className="normal-case">{second}</span>
           <span> {third}</span>
         </h1>

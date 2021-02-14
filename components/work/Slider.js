@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
 
@@ -7,12 +8,6 @@ import { sliderVariants } from 'utils/framer';
 import IconRight from 'components/icons/IconRight';
 import IconLeft from 'components/icons/IconLeft';
 
-/**
- * Experimenting with distilling swipe offset and velocity into a single variable, so the
- * less distance a user has swiped, the more velocity they need to register as a swipe.
- * Should accomodate longer swipes and short flicks without having binary checks on
- * just distance thresholds and velocity > 0.
- */
 const swipeConfidenceThreshold = 10000;
 
 const swipePower = (offset, velocity) => {
@@ -24,10 +19,6 @@ const Slider = ({ gallery }) => {
 
   const images = gallery.map((image) => image.url);
 
-  // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
-  // then wrap that within 0-2 to find our image ID in the array below. By passing an
-  // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
-  // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
   const imageIndex = wrap(0, images.length, slide);
 
   const paginate = (newDirection) => {
@@ -35,10 +26,10 @@ const Slider = ({ gallery }) => {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center">
+    <div className="relative w-full lg:w-1/3 lg:h-full lg:flex lg:items-center">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
-          className="absolute lg:max-h-full-75 lg:px-20 2xl:px-24"
+          className="absolute"
           key={slide}
           src={images[imageIndex]}
           custom={direction}
@@ -48,7 +39,7 @@ const Slider = ({ gallery }) => {
           exit="exit"
           transition={{
             x: { type: 'spring', stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 }
+            opacity: { duration: 1 }
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -64,14 +55,15 @@ const Slider = ({ gallery }) => {
           }}
         />
       </AnimatePresence>
+
       <div
-        className="absolute -right-8 lg:right-0 flex justify-center items-center w-4 lg:w-12 h-4 lg:h-12 select-none cursor-pointer border border-accent-dark rounded-full text-4xl z-50 text-accent-dark"
+        className="tw-slider-control -right-12 lg:-right-20 2xl:-right-24 tw-link"
         onClick={() => paginate(1)}
       >
         <IconRight />
       </div>
       <div
-        className="absolute -left-8 lg:left-0 flex justify-center items-center w-4 lg:w-12 h-4 lg:h-12 select-none cursor-pointer border border-accent-dark rounded-full text-4xl z-50 text-accent-dark"
+        className="tw-slider-control -left-12 lg:-left-20 2xl:-left-24 tw-link"
         onClick={() => paginate(-1)}
       >
         <IconLeft />

@@ -3,7 +3,13 @@ import { motion } from 'framer-motion';
 
 import { WEB_NAME } from 'utils/constants';
 import { pageVariants } from 'utils/framer';
-import { getHome, getAbout, getContact, getAllProjects } from 'lib/graphcms';
+import {
+  getHome,
+  getAbout,
+  getContact,
+  getWork,
+  getAllProjects
+} from 'lib/graphcms';
 
 import Layout from 'components/nav/Layout';
 import HomeSection from 'components/home/HomeSection';
@@ -15,8 +21,8 @@ export default function Index({
   homeData,
   aboutData,
   contactData,
-  projectsData,
-  authorsData
+  workData,
+  projectsData
 }) {
   return (
     <>
@@ -35,13 +41,9 @@ export default function Index({
         >
           <HomeSection homeData={homeData} />
 
-          <AboutSection
-            aboutData={aboutData}
-            contactData={contactData}
-            authorsData={authorsData}
-          />
+          <AboutSection aboutData={aboutData} contactData={contactData} />
           <div id="work">
-            <WorkSection projectsData={projectsData} />
+            <WorkSection projectsData={projectsData} workData={workData} />
           </div>
         </motion.div>
       </Layout>
@@ -53,6 +55,7 @@ export async function getStaticProps({ preview = false }) {
   const homeData = (await getHome()) || [];
   const aboutData = (await getAbout()) || [];
   const contactData = (await getContact()) || [];
+  const workData = (await getWork()) || [];
   const projectsData = (await getAllProjects(preview)) || [];
 
   return {
@@ -61,6 +64,7 @@ export async function getStaticProps({ preview = false }) {
       homeData,
       aboutData,
       contactData,
+      workData,
       projectsData
     }
   };
