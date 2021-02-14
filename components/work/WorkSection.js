@@ -12,6 +12,7 @@ const WorkSection = ({ projectsData, workData }) => {
 
   return (
     <motion.section
+      id="work"
       className="relative w-screen flex min-h-screen lg:h-screen text-white overflow-x-hidden lg:scroll-snap-start"
       ref={constraintsRef}
     >

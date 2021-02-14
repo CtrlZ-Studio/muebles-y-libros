@@ -22,6 +22,7 @@ const AboutSection = ({ aboutData }) => {
         </div>
         <div className="w-full lg:w-1/3 flex flex-col justify-center">
           <Image
+            alt={aboutData.heroImage.alt}
             src={aboutData.heroImage.url}
             width={aboutData.heroImage.width}
             height={aboutData.heroImage.height}

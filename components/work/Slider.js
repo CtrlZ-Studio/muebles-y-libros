@@ -29,6 +29,7 @@ const Slider = ({ gallery }) => {
     <div className="relative w-full lg:w-1/3 lg:h-full lg:flex lg:items-center">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
+          alt="Mueble artesanal de madera."
           className="absolute"
           key={slide}
           src={images[imageIndex]}

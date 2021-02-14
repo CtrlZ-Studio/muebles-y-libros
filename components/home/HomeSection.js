@@ -12,6 +12,7 @@ const HomeSection = ({ homeData }) => {
 
       <div className="w-full lg:w-1/4">
         <Image
+          alt={homeData.heroImage.alt}
           src={homeData.heroImage.url}
           width={homeData.heroImage.width}
           height={homeData.heroImage.height}

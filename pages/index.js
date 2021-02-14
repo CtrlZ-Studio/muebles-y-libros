@@ -33,7 +33,7 @@ export default function Index({
         </Head>
 
         <motion.div
-          className="h-screen scroll-snap-y overflow-y-scroll"
+          className="h-screen lg:scroll-snap-y overflow-y-scroll"
           initial="initial"
           animate="animate"
           exit={{ opacity: 0 }}
@@ -42,9 +42,8 @@ export default function Index({
           <HomeSection homeData={homeData} />
 
           <AboutSection aboutData={aboutData} contactData={contactData} />
-          <div id="work">
-            <WorkSection projectsData={projectsData} workData={workData} />
-          </div>
+
+          <WorkSection projectsData={projectsData} workData={workData} />
         </motion.div>
       </Layout>
     </>

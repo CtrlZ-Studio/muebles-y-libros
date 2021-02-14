@@ -7,6 +7,7 @@ const ProjectCard = ({ project }) => {
       <Link href={`/projects/${project.slug}`}>
         <a>
           <Image
+            alt={project.coverImage.alt}
             src={project.coverImage.url}
             width={project.coverImage.width}
             height={project.coverImage.height}
