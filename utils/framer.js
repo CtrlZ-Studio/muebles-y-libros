@@ -1,6 +1,6 @@
 const pageEasing = [0.87, 0, 0.13, 1];
 const pageTransition = {
-  duration: 1,
+  duration: 0.3,
   ease: pageEasing
 };
 
