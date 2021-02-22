@@ -69,19 +69,15 @@
 
 @layer components {
   .tw-title {
-    @apply font-heading text-7xl lg:text-8xl 2xl:text-9xl text-accent-dark;
-  }
-
-  .tw-header {
-    @apply flex items-center h-10 lg:h-14 2xl:h-16 px-6 lg:px-10 2xl:px-12 uppercase text-base lg:text-xl 2xl:text-2xl border-2 border-accent-dark;
+    @apply font-heading text-7xl md:text-9xl lg:text-8xl 2xl:text-9xl text-accent-dark;
   }
 
   .tw-px {
-    @apply px-12 lg:px-20 2xl:px-24;
+    @apply px-12 md:px-24 lg:px-20 2xl:px-24;
   }
 
   .tw-pt {
-    @apply pt-12 lg:pt-20 2xl:pt-24;
+    @apply pt-12 md:pt-24 lg:pt-20 2xl:pt-24;
   }
 
   .tw-slider-control {

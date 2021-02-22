@@ -5,7 +5,7 @@ const HomeSection = ({ homeData }) => {
   let [first, second, third] = WEB_NAME.split(' ');
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center space-y-1 lg:space-y-3 2xl:space-y-4 tw-px scroll-snap-start">
+    <section className="h-screen flex flex-col justify-center items-center tw-px space-y-1 lg:space-y-3 2xl:space-y-4 scroll-snap-start">
       <div>
         <h1 className="tw-title">{first}</h1>
       </div>

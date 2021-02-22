@@ -22,7 +22,7 @@ export default function ProjectPage({ preview, project }) {
   return (
     <Layout preview={preview}>
       <motion.section
-        className="flex flex-col lg:flex-row lg:h-screen lg:items-center lg:justify-around space-y-12 lg:space-y-0 tw-px pt-12 lg:pt-0"
+        className="flex flex-col lg:flex-row lg:h-screen lg:items-center lg:justify-around space-y-12 lg:space-y-0 pt-12 tw-px lg:pt-0"
         initial="initial"
         animate="animate"
         exit={{ opacity: 0 }}
@@ -34,7 +34,7 @@ export default function ProjectPage({ preview, project }) {
           <>
             <Head>
               <title>
-                {WEB_NAME} || {project.seoMetadata.title}
+                {WEB_NAME} | {project.seoMetadata.title}
               </title>
               <meta
                 name="description"

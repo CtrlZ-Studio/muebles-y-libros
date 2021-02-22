@@ -34,7 +34,7 @@ export default function Index({
         </Head>
 
         <motion.div
-          className="h-screen lg:scroll-snap-y overflow-y-scroll"
+          className="h-screen scroll-snap-y overflow-y-scroll"
           initial="initial"
           animate="animate"
           exit={{ opacity: 0 }}

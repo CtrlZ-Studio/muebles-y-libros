@@ -6,6 +6,17 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
 
   theme: {
+    container: {
+      center: true
+      // // padding: {
+      // //   DEFAULT: '1rem',
+      // //   sm: '2rem',
+      // //   lg: '4rem',
+      // //   xl: '5rem',
+      // //   '2xl': '6rem'
+      // // }
+    },
+
     colors: {
       'accent-dark': '#1818d6',
       'accent-medium': '#5252e0',
