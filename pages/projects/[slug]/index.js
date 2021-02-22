@@ -22,7 +22,7 @@ export default function ProjectPage({ preview, project }) {
   return (
     <Layout preview={preview}>
       <motion.section
-        className="flex flex-col lg:flex-row lg:h-screen lg:items-center lg:justify-evenly space-y-12 lg:space-y-0 tw-px pt-12 lg:pt-0"
+        className="flex flex-col lg:flex-row lg:h-screen lg:items-center lg:justify-around space-y-12 lg:space-y-0 tw-px pt-12 lg:pt-0"
         initial="initial"
         animate="animate"
         exit={{ opacity: 0 }}
@@ -42,7 +42,7 @@ export default function ProjectPage({ preview, project }) {
               />
             </Head>
 
-            <div className="absolute top-6 lg:top-10 2xl:top-12 left-6 lg:left-10 2xl:left-12 w-6 lg:w-10 2xl:w-12 text-accent-dark tw-link">
+            <div className="absolute top-6 lg:top-10 2xl:top-12 left-6 lg:left-10 2xl:left-12 w-6 lg:w-10 2xl:w-12 tw-link text-accent-dark hover:text-accent-light">
               <Link href="/#work" scroll={false}>
                 <a>
                   <IconBack />
@@ -56,7 +56,7 @@ export default function ProjectPage({ preview, project }) {
               </h1>
 
               <div
-                className="text-base lg:text-xl 2xl:text-2xl"
+                className="text-base lg:text-xl 2xl:text-2xl text-accent-dark"
                 dangerouslySetInnerHTML={{ __html: project.description.html }}
               />
             </div>

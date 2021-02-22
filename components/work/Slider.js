@@ -40,7 +40,7 @@ const Slider = ({ gallery }) => {
           exit="exit"
           transition={{
             x: { type: 'spring', stiffness: 300, damping: 30 },
-            opacity: { duration: 1 }
+            opacity: { duration: 0.6 }
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -58,13 +58,13 @@ const Slider = ({ gallery }) => {
       </AnimatePresence>
 
       <div
-        className="tw-slider-control -right-12 lg:-right-20 2xl:-right-24 tw-link"
+        className="tw-slider-control -right-12 lg:-right-20 2xl:-right-24 tw-link hover:text-accent-light"
         onClick={() => paginate(1)}
       >
         <IconRight />
       </div>
       <div
-        className="tw-slider-control -left-12 lg:-left-20 2xl:-left-24 tw-link"
+        className="tw-slider-control -left-12 lg:-left-20 2xl:-left-24 tw-link hover:text-accent-light"
         onClick={() => paginate(-1)}
       >
         <IconLeft />

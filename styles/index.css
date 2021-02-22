@@ -69,11 +69,11 @@
 
 @layer components {
   .tw-title {
-    @apply font-heading text-6xl lg:text-8xl 2xl:text-9xl text-accent-dark;
+    @apply font-heading text-7xl lg:text-8xl 2xl:text-9xl text-accent-dark;
   }
 
   .tw-header {
-    @apply flex items-center h-12 lg:h-20 2xl:h-24 px-6 lg:px-10 2xl:px-12 uppercase text-lg lg:text-2xl 2xl:text-3xl border-2;
+    @apply flex items-center h-10 lg:h-14 2xl:h-16 px-6 lg:px-10 2xl:px-12 uppercase text-base lg:text-xl 2xl:text-2xl border-2 border-accent-dark;
   }
 
   .tw-px {
@@ -89,7 +89,7 @@
   }
 
   .tw-link {
-    @apply tw-animation hover:text-black hover:scale-90;
+    @apply tw-animation hover:scale-90;
   }
 
   .tw-animation {
@@ -100,7 +100,7 @@
 @layer utilities {
   @variants responsive {
     .scroll-snap-y {
-      scroll-snap-type: y proximity;
+      scroll-snap-type: y mandatory;
     }
     .scroll-snap-start {
       scroll-snap-align: start;

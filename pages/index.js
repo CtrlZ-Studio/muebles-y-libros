@@ -15,6 +15,7 @@ import Layout from 'components/nav/Layout';
 import HomeSection from 'components/home/HomeSection';
 import AboutSection from 'components/about/AboutSection';
 import WorkSection from 'components/work/WorkSection';
+import ContactSection from 'components/contact/contactSection';
 
 export default function Index({
   preview,
@@ -44,6 +45,8 @@ export default function Index({
           <AboutSection aboutData={aboutData} contactData={contactData} />
 
           <WorkSection projectsData={projectsData} workData={workData} />
+
+          <ContactSection contactData={contactData} />
         </motion.div>
       </Layout>
     </>
