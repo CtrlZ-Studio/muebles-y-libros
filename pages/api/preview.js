@@ -23,6 +23,6 @@ export default async function handler(req, res) {
 
   // Redirect to the path from the fetched project
   // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
-  res.writeHead(307, { Location: `/projects/${poject.slug}` });
+  res.writeHead(307, { Location: `/projects/${project.slug}` });
   res.end();
 }
