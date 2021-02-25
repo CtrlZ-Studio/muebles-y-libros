@@ -46,8 +46,8 @@ const ContactSection = ({ contactData }) => {
         </div>
       </section>
 
-      <footer className="absolute bottom-0 left-0 right-0 h-6 lg:h-10 2xl:h-12 flex items-center justify-center font-light">
-        <small className="text-white 2xl:text-sm opacity-50">
+      <footer className="absolute bottom-0 left-0 right-0 h-6 md:h-8 lg:h-10 2xl:h-12 flex items-center justify-center">
+        <small className="text-white text-xs md:text-sm 2xl:text-base opacity-50">
           &copy; {year} Muebles y Libros | Web de{' '}
           <a
             href="https://github.com/CtrlZ-Studio"
