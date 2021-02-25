@@ -13,7 +13,7 @@ const ContactSection = ({ contactData }) => {
         {WEB_NAME} // {contactData.heading}
       </SectionHeader>
 
-      <section className="flex flex-col items-center justify-center h-full tw-pt space-y-6 md:space-y-12 lg:space-y-10 2xl:space-y-12 text-base md:text-2xl lg:text-xl 2xl:text-2xl">
+      <section className="flex flex-col items-center justify-center h-full tw-py space-y-6 md:space-y-12 lg:space-y-10 2xl:space-y-12 text-base md:text-2xl lg:text-xl 2xl:text-2xl">
         <div className="w-full lg:w-1/3">
           <IconLogo />
         </div>

@@ -22,7 +22,7 @@ const WorkSection = ({ projectsData, workData }) => {
         {WEB_NAME} // {workData.heading}
       </SectionHeader>
 
-      <div className="flex tw-pt lg:h-screen">
+      <div className="flex tw-py lg:h-screen">
         <motion.div
           className="relative flex items-center"
           drag={'x'}
@@ -30,7 +30,7 @@ const WorkSection = ({ projectsData, workData }) => {
           dragElastic={0.05}
         >
           <motion.div
-            className="absolute top-6 md:top-12 right-6 md:right-12 flex space-x-3 lg:space-x-5 2xl:space-x-6 text-sm lg:text-lg 2xl:text-xl items-center text-accent-dark"
+            className="absolute top-0 right-0 flex space-x-3 lg:space-x-5 2xl:space-x-6 text-sm lg:text-lg 2xl:text-xl items-center text-accent-dark"
             animate={{ opacity: [0, 1, 0] }}
             transition={{ ease: 'linear', duration: 2, repeat: Infinity }}
           >
@@ -47,7 +47,7 @@ const WorkSection = ({ projectsData, workData }) => {
             ))}
 
           <motion.div
-            className="absolute bottom-6 md:bottom-12 left-6 md:left-12 flex space-x-3 lg:space-x-5 2xl:space-x-6 text-sm lg:text-lg 2xl:text-xl items-center text-accent-dark"
+            className="absolute bottom-0 left-0 flex space-x-3 lg:space-x-5 2xl:space-x-6 text-sm lg:text-lg 2xl:text-xl items-center text-accent-dark"
             animate={{ opacity: [0, 1, 0] }}
             transition={{ ease: 'linear', duration: 2, repeat: Infinity }}
           >
