@@ -48,7 +48,7 @@ const ContactSection = ({ contactData }) => {
 
       <footer className="absolute bottom-0 left-0 right-0 h-6 md:h-8 lg:h-10 2xl:h-12 flex items-center justify-center">
         <small className="text-white text-xs md:text-sm 2xl:text-base opacity-50">
-          &copy; {year} Muebles y Libros | Web de{' '}
+          &copy; {year} Muebles y Libros | Web creada por{' '}
           <a
             className="italic"
             href="https://luis-anaya-portfolio.vercel.app/"
