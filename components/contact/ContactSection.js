@@ -50,11 +50,12 @@ const ContactSection = ({ contactData }) => {
         <small className="text-white text-xs md:text-sm 2xl:text-base opacity-50">
           &copy; {year} Muebles y Libros | Web de{' '}
           <a
-            href="https://github.com/CtrlZ-Studio"
+            className="italic"
+            href="https://luis-anaya-portfolio.vercel.app/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            Ctrl-Z Studio
+            Luis Anaya
           </a>
         </small>
       </footer>
